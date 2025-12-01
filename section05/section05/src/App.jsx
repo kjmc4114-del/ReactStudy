@@ -1,15 +1,18 @@
 import './App.css'
-import Header from './compoents/Header'; // vite는 확장자를 생략가능하다.
-import Main from './compoents/Main';
-import Footer from './compoents/Footer';
+import Button from './compoents/Button';
 
 function App() { // html을 반환하는 함수를 컴포넌트라고한다.  Root 컴포넌트  관례상 App으로 많이 짓는다.
+  const buttonProps = {
+    text: 'Click',
+    color: 'blue'
+  }
   return (
-    <>      
-      <Header /> 
-      <Main />
-      <h1>App</h1>
-      <Footer />
+    <>     
+      <Button {...buttonProps}/>
+      <Button text = {"버튼2"}/>
+      <Button>
+        <span>안녕하세요</span>
+      </Button>
     </>
   )
 } // Root 컴포넌트 아래 자식컴포넌트로 구성됨
