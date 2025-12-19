@@ -6,8 +6,8 @@ import useInput from "../hooks/useInput.jsx";
 //2.훅은 조건부에서 허용되지 않는다. (반복문, if문, 중첩된 함수 등에서 사용금지)
 //3.훅은 최상위에서만 호출되어야 한다. (return문, break문 등에서 사용금지)
 
-const HookExam = () => {
-    const state = useState(0); // 훅은 조건 반복안에서는 호출이 절대 안됨<div className=""></div>
+const HookExam = () => { 
+    const state = useState(0); // 훅은 조건 반복안에서는 호출이 절대 안됨<div className=""></div> // 최상위에서만 호출되어야 한다.
     // useInput 훅을 사용해보자
     const name = useInput();
     const password = useInput();     
